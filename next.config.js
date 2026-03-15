@@ -4,13 +4,13 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: '/.well-known/apple-app-site-association',
+        source: '/.well-known/assetlinks.json',
         headers: [
           { key: 'Content-Type', value: 'application/json' },
         ],
       },
       {
-        source: '/.well-known/apple-app-site-association.json',
+        source: '/.well-known/apple-app-site-association',
         headers: [
           { key: 'Content-Type', value: 'application/json' },
         ],
@@ -21,8 +21,6 @@ const nextConfig = {
     return [
       // assetlinks: without .json → serve assetlinks.json
       { source: '/.well-known/assetlinks', destination: '/.well-known/assetlinks.json' },
-      // apple-app-site-association: with .json → serve apple-app-site-association (no extension)
-      { source: '/.well-known/apple-app-site-association.json', destination: '/.well-known/apple-app-site-association' },
     ];
   },
   images: {
