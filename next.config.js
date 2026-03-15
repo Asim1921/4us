@@ -1,17 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  async redirects() {
-    return [
-      // Redirect apex (4us.co) to www EXCEPT for /.well-known/* (required for Android/iOS app links)
-      {
-        source: '/((?!\\.well-known).*)',
-        has: [{ type: 'host', value: '4us.co' }],
-        destination: 'https://www.4us.co/$1',
-        permanent: true,
-      },
-    ];
-  },
   async headers() {
     return [
       {
