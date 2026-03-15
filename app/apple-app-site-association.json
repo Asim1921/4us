@@ -1,0 +1,14 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "36Q9F7L5U2.com.forus.forusApp",
+                "paths": [
+                    "/events/*",
+                    "/business/*"
+                ]
+            }
+        ]
+    }
+}
